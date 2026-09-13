@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Collect Sweden’s roasteries. Keep track of every one you taste, earn milestones, and discover your next coffee. No account needed.">
+  <title>Kaffeklassikern — Your roaster collection</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">Skip to collection</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Kaffeklassikern home"><img src="./assets/brand.webp" width="66" height="66" alt=""><span>KAFFEKLASSIKERN<small>A collection worth tasting.</small></span></a>
+    <nav aria-label="Main"><a href="#collection">Collection</a><a href="#milestones">Milestones</a></nav>
+    <button class="save-status text-button" id="save-status" data-action="manage">Checking browser storage…</button>
+  </header>
+  <main class="wrap">
+    <div id="storage-warning" class="notice warning" hidden></div>
+    <div id="catalog-notice" class="notice" hidden></div>
+    <section class="overview" aria-labelledby="challenge-title">
+      <div class="intro"><p class="eyebrow">THE SWEDISH ROASTER CHALLENGE</p><h1 id="challenge-title">Your roaster challenge.<br><span>At your pace.</span></h1><p>Collect Sweden’s roasteries. Keep track of every one you taste.</p></div>
+      <div class="collection-progress" id="overview-progress"></div>
+    </section>
+    <section id="milestones" class="milestones" aria-labelledby="milestones-title">
+      <div class="section-heading"><h2 id="milestones-title">One tasting closer.</h2><p>Your milestones</p></div>
+      <div id="milestone-badges" class="milestone-grid"></div>
+      <div class="regions-overview"><div id="regional-total"></div><button class="text-button" id="regions-toggle" aria-expanded="false" aria-controls="regional-badges" data-action="regions">View all regions <span aria-hidden="true">↗</span></button></div>
+      <div id="regional-badges" class="region-grid" hidden></div>
+    </section>
+    <section id="collection" aria-labelledby="collection-title">
+      <div class="section-heading collection-heading"><div><p class="eyebrow">A LITTLE CURIOSITY GOES A LONG WAY</p><h2 id="collection-title">Your collection<span id="catalog-count"></span></h2></div><button class="primary" data-action="discover"><span aria-hidden="true">⤨</span> Pick my next roaster</button></div>
+      <div class="collection-tabs" id="collection-tabs" role="group" aria-label="Collection status"></div>
+      <div class="filters">
+        <div class="view-switch" role="group" aria-label="Collection view"><button data-action="view" data-value="cards" aria-pressed="true">List</button><button data-action="view" data-value="map" aria-pressed="false">Map</button></div>
+        <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">Search roasters or towns</span><input id="search" type="search" placeholder="Search roasters or towns" autocomplete="off"></label>
+        <label class="region-filter"><span class="sr-only">Region</span><select id="region"><option value="">All regions</option></select></label>
+        <label class="checkbox"><input id="not-tasted" type="checkbox">Not tasted</label>
+        <label id="sort-label" hidden><span class="sr-only">Sort tasted roasters</span><select id="sort"><option value="alpha">Alphabetical</option><option value="recent">Recently tasted</option></select></label>
+      </div>
+      <div class="results-line"><p id="results-count" aria-live="polite"></p><button id="clear-filters" class="text-button" data-action="clear-filters" hidden>Clear filters ×</button></div>
+      <div id="collection-content"><p class="loading">Preparing your collection…</p></div>
+      <div id="retired-content"></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><div class="footer-top"><div class="footer-brand">KAFFEKLASSIKERN<span>Every roaster. Your own pace.</span></div><div class="footer-actions"><button class="text-button" data-action="export">Export collection</button><button class="text-button" data-action="about">About</button><button class="text-button" data-action="contact">Contact</button><button class="text-button" data-action="privacy">Privacy</button><span id="github-link"></span><button class="text-button" data-action="manage">Manage collection</button></div></div><div class="footer-bottom"><p>Your collection stays in this browser. Export a copy to keep a record of your tastings and notes.</p><p id="review-date"></p></div><p class="footer-note">Not affiliated with or endorsed by the roasteries listed.</p><p class="footer-note">No analytics or advertising trackers. Your tasting notes stay in this browser.</p><p class="footer-note"><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> · <a href="./data/map-attribution.json">Map data and sources</a></p></footer>
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><button class="close-button" data-action="close" aria-label="Close roaster details">×</button><div id="detail-content"></div></dialog>
+  <dialog id="utility-dialog" class="utility-dialog" aria-labelledby="utility-title"><button class="close-button" data-action="close" aria-label="Close dialog">×</button><div id="utility-content"></div></dialog>
+  <dialog id="contact-dialog" class="utility-dialog" aria-labelledby="contact-title">
+    <button class="close-button" data-action="close" aria-label="Close contact form">×</button>
+    <h2 id="contact-title">Let’s talk coffee.</h2>
+    <p>A correction, a coffee suggestion, a bug, or something you’d like changed or removed? We’re listening.</p>
+    <form id="contact-form" class="contact-form">
+      <label>Your email<input name="email" type="email" autocomplete="email" required maxlength="254"><small>Only so we can reply.</small></label>
+      <label>Your note<textarea name="message" required minlength="10" maxlength="5000" rows="5" placeholder="If this concerns a roastery or an image, include its name and what you’d like us to change."></textarea></label>
+      <label class="contact-honeypot" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
+      <p class="contact-privacy">Sending shares your message and reply details with us through <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree</a>. Your collection and tasting notes are never attached. Please don’t include sensitive information.</p>
+      <p id="contact-status" class="subtle" role="status" aria-live="polite">Checking contact availability…</p>
+      <div class="utility-actions"><button class="primary" type="submit" disabled>Send message</button><button type="button" data-action="close">Cancel</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="notice">Enable JavaScript to use your local coffee collection. Your progress is stored in your browser.</p></noscript>
+</body>
+</html>
