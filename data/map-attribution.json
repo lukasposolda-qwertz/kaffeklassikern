@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-13",
+  "attribution": "© OpenStreetMap contributors",
+  "copyrightUrl": "https://www.openstreetmap.org/copyright",
+  "coordinates": {
+    "count": 81,
+    "source": "Nominatim / OpenStreetMap, as recorded by the project owner",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "data": "./catalog.json",
+    "scope": "The OSM-derived coordinate database is made available under ODbL 1.0. This does not license photographs, logos or application code."
+  },
+  "countyShapes": {
+    "count": 21,
+    "source": "https://github.com/okfse/sweden-geojson",
+    "sourceFile": "swedish_regions.geojson",
+    "licenseStatus": "No formal LICENSE file or named licence found. README says: Feel free to reuse.",
+    "upstream": "https://github.com/jnordgren/swedish_data_map_geojson",
+    "upstreamNotice": "Upstream README attributes council data to OpenStreetMap under ODbL and province data to Natural Earth. The precise licence chain for the regional file remains to be clarified; no MIT or CC0 licence is claimed.",
+    "changes": "Source geometry was simplified upstream and converted into SVG paths for this app. Paths are available in catalog.json under regions."
+  }
+}
