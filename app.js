@@ -42,7 +42,7 @@ function renderOverview(){
   $('#catalog-count').textContent=`${p.total} roasters`;
   $('#collection-tabs').innerHTML=[['all','All',p.total],['tasted','Tasted',p.tasted],['saved','Want to try',p.saved]].map(([id,label,count])=>`<button data-action="tab" data-value="${id}" class="${filters.tab===id?'active':''}" aria-pressed="${filters.tab===id}">${label}<span class="count-pill">${count}</span></button>`).join('');
 }
-function reviewText(){return catalog.reviewedAt?`Catalogue reviewed ${new Date(catalog.reviewedAt+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}`:'Baseline prepared 11 Sep 2026 · Review pending';}
+function reviewText(){return catalog.reviewedAt?`Roaster catalogue updated ${new Date(catalog.reviewedAt+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}`:'Baseline prepared 11 Sep 2026 · Review pending';}
 function renderCollection(){
   const matching=filteredRoasters(catalog,collection,filters);
   $('#results-count').textContent=`${matching.length} matching ${matching.length===1?'roaster':'roasters'}${filters.region?' in '+regionName(filters.region):''}`;
@@ -204,7 +204,6 @@ async function init(){
     collection.catalogSnapshot=snapshot(catalog);persist();
     $('#region').innerHTML='<option value="">All regions</option>'+catalog.regions.toSorted((a,b)=>a.name.localeCompare(b.name,'sv')).map(r=>`<option value="${r.id}">${escape(r.name)}</option>`).join('');
     $('#review-date').textContent=reviewText();$('#collection-title').tabIndex=-1;
-    $('#github-link').innerHTML=catalog.githubUrl?`<a href="${externalUrl(catalog.githubUrl)}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>`:'';
     renderAll();registerAgentTools();
   }catch(error){$('#collection-content').innerHTML='<div class="empty"><h3>The collection could not load.</h3><p>Please refresh the page. Existing saved tastings have not been changed.</p><button onclick="location.reload()">Try again</button></div>';$('#save-status').textContent='Collection unavailable';console.error(error);}
 }
