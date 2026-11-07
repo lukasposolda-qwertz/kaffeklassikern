@@ -1544,6 +1544,32 @@
       }
     },
     {
+      "id": "pennybridge-roasters",
+      "name": "Pennybridge Roasters",
+      "town": "Örebro",
+      "regionId": "SE-T",
+      "address": "Drottninggatan 7, 702 10 Örebro",
+      "description": "Pennybridge Roasters is a coffee and tea roastery in Örebro working from a 155 square metre production facility. It roasts traceable, carefully selected coffees, several of them organic certified, and supplies cafés and workplaces as well as private customers. Consumer sales run through the Kaffemästaren webshop, which shares the company's Örebro address.",
+      "sourceUrl": "https://pennybridgeroasters.com/om-oss/",
+      "webshop": "https://www.kaffemastaren.se/",
+      "instagram": null,
+      "latitude": 59.27258,
+      "longitude": 15.21243,
+      "active": true,
+      "x": 321.5,
+      "y": 1713.1,
+      "image": {
+        "src": "./assets/roasters/pennybridge-roasters.webp",
+        "alt": "Pennybridge Roasters logo.",
+        "fit": "contain",
+        "focalPoint": "50% 50%",
+        "origin": "project-supplied",
+        "attribution": "Project-supplied source image",
+        "reuseBasis": "Supplied by the project owner; public reuse permission not obtained.",
+        "caption": "Prepared from the project-supplied original for the 4:3 card frame."
+      }
+    },
+    {
       "id": "quo-coffee",
       "name": "Quo Coffee",
       "town": "Rönnäng",
