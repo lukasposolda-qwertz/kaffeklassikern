@@ -1,8 +1,8 @@
 {
   "version": 1,
   "preparedAt": "2026-09-11",
-  "reviewedAt": "2026-09-14",
-  "reviewNote": "Roaster catalogue updated 14 September 2026.",
+  "reviewedAt": "2026-11-07",
+  "reviewNote": "Roaster catalogue updated 7 November 2026.",
   "githubUrl": null,
   "issueUrl": null,
   "viewBox": [
@@ -770,6 +770,32 @@
       }
     },
     {
+      "id": "hoga-kusten-kaffe-rosteri",
+      "name": "Höga Kusten Kaffe Rosteri",
+      "town": "Stockholm",
+      "regionId": "SE-AB",
+      "address": "Fleminggatan 53, 112 32 Stockholm",
+      "description": "Höga Kusten Kaffe Rosteri started in the summer of 2014 and roasts arabica coffee exclusively from Ethiopia, the origin country of coffee. The roastery runs a shop on Fleminggatan on Kungsholmen from September to June, and moves to Mannaminne at Häggvik in Nordingrå, on the Höga Kusten coast, during July and August.",
+      "sourceUrl": "https://hogakustenkafferosteri.se/",
+      "webshop": "https://hogakustenkafferosteri.se/",
+      "instagram": "https://instagram.com/hkkafferosteri",
+      "latitude": 59.33369,
+      "longitude": 18.03764,
+      "active": true,
+      "x": 529.6,
+      "y": 1704.3,
+      "image": {
+        "src": "./assets/roasters/hoga-kusten-kaffe-rosteri.webp",
+        "alt": "Höga Kusten Kaffe Rosteri logo.",
+        "fit": "contain",
+        "focalPoint": "50% 50%",
+        "origin": "project-supplied",
+        "attribution": "Project-supplied source image",
+        "reuseBasis": "Supplied by the project owner; public reuse permission not obtained.",
+        "caption": "Prepared from the project-supplied original for the 4:3 card frame."
+      }
+    },
+    {
       "id": "i-am-coffee",
       "name": "I am Coffee",
       "town": "Halmstad",
@@ -1177,6 +1203,32 @@
       "image": {
         "src": "./assets/roasters/koppi.webp",
         "alt": "Roastery image for Koppi.",
+        "fit": "contain",
+        "focalPoint": "50% 50%",
+        "origin": "project-supplied",
+        "attribution": "Project-supplied source image",
+        "reuseBasis": "Supplied by the project owner; public reuse permission not obtained.",
+        "caption": "Prepared from the project-supplied original for the 4:3 card frame."
+      }
+    },
+    {
+      "id": "kungsholmens-kafferosteri",
+      "name": "Kungsholmens Kafferosteri",
+      "town": "Stockholm",
+      "regionId": "SE-AB",
+      "address": "Svarvargatan 2, 112 49 Stockholm",
+      "description": "Kungsholmens Kafferosteri is part of Café Rialto on Svarvargatan on Kungsholmen in Stockholm. It buys green speciality coffee from selected farms around the world and roasts in a traditional drum roaster several times a week, with the roast watched by hand throughout.",
+      "sourceUrl": "https://kungsholmenskafferosteri.se/",
+      "webshop": "https://kungsholmenskafferosteri.se/webbshop",
+      "instagram": null,
+      "latitude": 59.33697,
+      "longitude": 18.02577,
+      "active": true,
+      "x": 528.7,
+      "y": 1703.8,
+      "image": {
+        "src": "./assets/roasters/kungsholmens-kafferosteri.webp",
+        "alt": "Kungsholmens Kafferosteri logo.",
         "fit": "contain",
         "focalPoint": "50% 50%",
         "origin": "project-supplied",
