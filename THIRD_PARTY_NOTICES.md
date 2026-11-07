@@ -2,7 +2,7 @@
 
 ## OpenStreetMap coordinates
 
-© OpenStreetMap contributors. All 81 roastery coordinates were obtained through Nominatim, according to the project owner's source record. The OSM-derived coordinate database in `dist/data/catalog.json` is made available under the [Open Database Licence 1.0](https://opendatacommons.org/licenses/odbl/1-0/). See [OpenStreetMap copyright and attribution](https://www.openstreetmap.org/copyright). Keep the visible map credit and this notice when redistributing it.
+© OpenStreetMap contributors. The roastery locations were obtained through Nominatim. `dist/data/catalog.json` publishes only the projected map position (`x`, `y`) derived from them, not street addresses or coordinates. These OSM-derived map positions are made available under the [Open Database Licence 1.0](https://opendatacommons.org/licenses/odbl/1-0/). See [OpenStreetMap copyright and attribution](https://www.openstreetmap.org/copyright). Keep the visible map credit and this notice when redistributing it.
 
 ## County shapes
 
